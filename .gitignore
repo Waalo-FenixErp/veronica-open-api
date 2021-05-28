@@ -28,3 +28,4 @@ persistence/.factorypath
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspace
+*.properties
