@@ -53,8 +53,8 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
                 .authorizedGrantTypes(auth2Grant.split(","))
                 .scopes("read", "write")
                 .resourceIds(auth2ResourceId)
-                .accessTokenValiditySeconds(1200)
-                .refreshTokenValiditySeconds(1200);
+                .accessTokenValiditySeconds(3600)
+                .refreshTokenValiditySeconds(604800);
     }
 
     @Override

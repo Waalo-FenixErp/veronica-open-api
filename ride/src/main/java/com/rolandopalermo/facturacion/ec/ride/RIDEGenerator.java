@@ -71,6 +71,7 @@ public class RIDEGenerator {
     public byte[] buildPDF(String xmlContent, String numeroAutorizacion, String fechaAutorizacion)
             throws VeronicaException {
         File comprobante;
+        System.out.println(numeroAutorizacion+"ESPACIO"+fechaAutorizacion);
         try {
             //Create temp XML file
             comprobante = File.createTempFile(numeroAutorizacion, ".xml");

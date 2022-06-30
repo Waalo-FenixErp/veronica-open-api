@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RIDE_factura" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="23078fe1-b005-44ae-8dc0-7a1396cac66c">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RIDE_liquidacionCompra" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="23078fe1-b005-44ae-8dc0-7a1396cac66c">
 	<property name="ireport.zoom" value="1.6500000000000052"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="493"/>
@@ -59,7 +59,7 @@
 	</subDataset>
 	<subDataset name="dataset2" uuid="deb96def-a3fd-4c48-bd80-941d815b51e2">
 		<queryString language="xPath">
-			<![CDATA[/factura/infoAdicional/campoAdicional]]>
+			<![CDATA[/liquidacionCompra/infoAdicional/campoAdicional]]>
 		</queryString>
 		<field name="campoAdicional" class="java.lang.String">
 			<fieldDescription><![CDATA[child::text()]]></fieldDescription>
@@ -73,7 +73,7 @@
 	<parameter name="hmapFormasPago" class="java.util.HashMap"/>
 	<parameter name="logo" class="java.lang.String"/>
 	<queryString language="xPath">
-		<![CDATA[/factura]]>
+		<![CDATA[/liquidacionCompra]]>
 	</queryString>
 	<field name="ruc" class="java.lang.String">
 		<fieldDescription><![CDATA[infoTributaria/ruc]]></fieldDescription>
@@ -85,7 +85,7 @@
 		<fieldDescription><![CDATA[infoTributaria/dirMatriz]]></fieldDescription>
 	</field>
 	<field name="obligadoContabilidad" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/obligadoContabilidad]]></fieldDescription>
+		<fieldDescription><![CDATA[infoLiquidacionCompra/obligadoContabilidad]]></fieldDescription>
 	</field>
 	<field name="claveAcceso" class="java.lang.String">
 		<fieldDescription><![CDATA[infoTributaria/claveAcceso]]></fieldDescription>
@@ -97,7 +97,7 @@
 		<fieldDescription><![CDATA[infoTributaria/tipoEmision]]></fieldDescription>
 	</field>
 	<field name="fechaEmision" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/fechaEmision]]></fieldDescription>
+		<fieldDescription><![CDATA[infoLiquidacionCompra/fechaEmision]]></fieldDescription>
 	</field>
 	<field name="estab" class="java.lang.String">
 		<fieldDescription><![CDATA[infoTributaria/estab]]></fieldDescription>
@@ -108,23 +108,23 @@
 	<field name="secuencial" class="java.lang.String">
 		<fieldDescription><![CDATA[infoTributaria/secuencial]]></fieldDescription>
 	</field>
-	<field name="razonSocialComprador" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/razonSocialComprador]]></fieldDescription>
+	<field name="razonSocialProveedor" class="java.lang.String">
+		<fieldDescription><![CDATA[infoLiquidacionCompra/razonSocialProveedor]]></fieldDescription>
 	</field>
-	<field name="identificacionComprador" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/identificacionComprador]]></fieldDescription>
+	<field name="identificacionProveedor" class="java.lang.String">
+		<fieldDescription><![CDATA[infoLiquidacionCompra/identificacionProveedor]]></fieldDescription>
 	</field>
 	<field name="contribuyenteEspecial" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/contribuyenteEspecial]]></fieldDescription>
+		<fieldDescription><![CDATA[infoLiquidacionCompra/contribuyenteEspecial]]></fieldDescription>
 	</field>
 	<field name="dirEstablecimiento" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/dirEstablecimiento]]></fieldDescription>
+		<fieldDescription><![CDATA[infoLiquidacionCompra/dirEstablecimiento]]></fieldDescription>
 	</field>
-	<field name="direccionComprador" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/direccionComprador]]></fieldDescription>
+	<field name="direccionProveedor" class="java.lang.String">
+		<fieldDescription><![CDATA[infoLiquidacionCompra/direccionProveedor]]></fieldDescription>
 	</field>
 	<field name="guiaRemision" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/guiaRemision]]></fieldDescription>
+		<fieldDescription><![CDATA[infoLiquidacionCompra/guiaRemision]]></fieldDescription>
 	</field>
 	<field name="codigoPrincipal" class="java.lang.String">
 		<fieldDescription><![CDATA[detalles/detalle/codigoPrincipal]]></fieldDescription>
@@ -151,49 +151,49 @@
 		<fieldDescription><![CDATA[detalles/detalle/precioSinSubsidio]]></fieldDescription>
 	</field>
 	<field name="formaPago" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/pagos/pago/formaPago]]></fieldDescription>
+		<fieldDescription><![CDATA[infoLiquidacionCompra/pagos/pago/formaPago]]></fieldDescription>
 	</field>
 	<field name="total" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/pagos/pago/total]]></fieldDescription>
+		<fieldDescription><![CDATA[infoLiquidacionCompra/pagos/pago/total]]></fieldDescription>
 	</field>
 	<field name="plazo" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/pagos/pago/plazo]]></fieldDescription>
+		<fieldDescription><![CDATA[infoLiquidacionCompra/pagos/pago/plazo]]></fieldDescription>
 	</field>
 	<field name="unidadTiempo" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/pagos/pago/unidadTiempo]]></fieldDescription>
+		<fieldDescription><![CDATA[infoLiquidacionCompra/pagos/pago/unidadTiempo]]></fieldDescription>
 	</field>
 	<field name="subtotal12" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/totalConImpuestos/totalImpuesto[codigo='2' and codigoPorcentaje='2']/baseImponible]]></fieldDescription>
+		<fieldDescription><![CDATA[infoLiquidacionCompra/totalConImpuestos/totalImpuesto/baseImponible]]></fieldDescription>
 	</field>
 	<field name="totalSinImpuestos" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/totalSinImpuestos]]></fieldDescription>
+		<fieldDescription><![CDATA[infoLiquidacionCompra/totalSinImpuestos]]></fieldDescription>
 	</field>
 	<field name="importeTotal" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/importeTotal]]></fieldDescription>
+		<fieldDescription><![CDATA[infoLiquidacionCompra/importeTotal]]></fieldDescription>
 	</field>
 	<field name="iva12" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/totalConImpuestos/totalImpuesto[codigo='2' and codigoPorcentaje='2']/valor]]></fieldDescription>
+		<fieldDescription><![CDATA[infoLiquidacionCompra/totalConImpuestos/totalImpuesto[codigo='2' and codigoPorcentaje='2']/valor]]></fieldDescription>
 	</field>
 	<field name="subtotal0" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/totalConImpuestos/totalImpuesto[codigo='2' and codigoPorcentaje='0']/baseImponible]]></fieldDescription>
+		<fieldDescription><![CDATA[infoLiquidacionCompra/totalConImpuestos/totalImpuesto[codigo='2' and codigoPorcentaje='0']/baseImponible]]></fieldDescription>
 	</field>
 	<field name="subtotalNoObjeto" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/totalConImpuestos/totalImpuesto[codigo='2' and codigoPorcentaje='6']/baseImponible]]></fieldDescription>
+		<fieldDescription><![CDATA[infoLiquidacionCompra/totalConImpuestos/totalImpuesto[codigo='2' and codigoPorcentaje='6']/baseImponible]]></fieldDescription>
 	</field>
 	<field name="subtotalExcento" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/totalConImpuestos/totalImpuesto[codigo='2' and codigoPorcentaje='7']/baseImponible]]></fieldDescription>
+		<fieldDescription><![CDATA[infoLiquidacionCompra/totalConImpuestos/totalImpuesto[codigo='2' and codigoPorcentaje='7']/baseImponible]]></fieldDescription>
 	</field>
 	<field name="totalDescuento" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/totalDescuento]]></fieldDescription>
+		<fieldDescription><![CDATA[infoLiquidacionCompra/totalDescuento]]></fieldDescription>
 	</field>
 	<field name="ice" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/totalConImpuestos/totalImpuesto[codigo='3']/valor]]></fieldDescription>
+		<fieldDescription><![CDATA[infoLiquidacionCompra/totalConImpuestos/totalImpuesto[codigo='3']/valor]]></fieldDescription>
 	</field>
 	<field name="irbpnr" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/totalConImpuestos/totalImpuesto[codigo='5']/valor]]></fieldDescription>
+		<fieldDescription><![CDATA[infoLiquidacionCompra/totalConImpuestos/totalImpuesto[codigo='5']/valor]]></fieldDescription>
 	</field>
 	<field name="propina" class="java.lang.String">
-		<fieldDescription><![CDATA[infoFactura/propina]]></fieldDescription>
+		<fieldDescription><![CDATA[infoLiquidacionCompra/propina]]></fieldDescription>
 	</field>
 	<background>
 		<band splitType="Stretch"/>
@@ -500,14 +500,14 @@
 				<textElement verticalAlignment="Middle">
 					<paragraph leftIndent="2"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{razonSocialComprador}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{razonSocialProveedor}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement style="etiqueta-texto" x="71" y="306" width="212" height="20" uuid="9a340b53-ce30-471a-bfba-48de57edd700"/>
 				<textElement>
 					<paragraph leftIndent="2"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{identificacionComprador}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{identificacionProveedor}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement style="etiqueta-texto" x="90" y="326" width="193" height="20" uuid="11d8734f-aa38-49bb-b5ca-f08ed0631654"/>
@@ -521,7 +521,7 @@
 				<textElement>
 					<paragraph leftIndent="2"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{direccionComprador}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{direccionProveedor}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement style="etiqueta-texto" x="370" y="306" width="181" height="20" uuid="c4bffb86-e669-4b2f-8ae7-f627a39097d3"/>
@@ -551,7 +551,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="14"/>
 				</textElement>
-				<text><![CDATA[FACTURA]]></text>
+				<text><![CDATA[LIQUIDACIÓN DE COMPRA]]></text>
 			</staticText>
 			<textField>
 				<reportElement style="etiqueta-texto" x="305" y="55" width="246" height="20" uuid="ac91b7ea-9902-43c0-9acb-e7a109931cd2"/>
@@ -599,7 +599,7 @@
 				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="555" height="20" uuid="6e8702e3-c4c9-4d7a-a8c5-6ce0f58ab498"/>
 				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical" ignoreWidth="true">
 					<datasetRun subDataset="dataset1" uuid="657e1968-c808-4419-982f-79259b2aa9de">
-						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/factura/detalles/detalle")]]></dataSourceExpression>
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/liquidacionCompra/detalles/detalle")]]></dataSourceExpression>
 					</datasetRun>
 					<jr:listContents height="20" width="555">
 						<textField isStretchWithOverflow="true">
@@ -720,7 +720,7 @@
 							<textElement textAlignment="Right">
 								<paragraph rightIndent="2"/>
 							</textElement>
-							<textFieldExpression><![CDATA[$F{cantidad}.trim()]]></textFieldExpression>
+							<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
 						</textField>
 					</jr:listContents>
 				</jr:list>
@@ -1007,7 +1007,7 @@
 						<textFieldExpression><![CDATA[$F{ice}==null?0:$F{ice}]]></textFieldExpression>
 					</textField>
 				</frame>
-				<frame>
+				<!--<frame>
 					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="0" width="305" height="40" isRemoveLineWhenBlank="true" uuid="b065232e-ea96-4c67-b195-5807c1d9ebf0"/>
 					<staticText>
 						<reportElement style="etiqueta-celda" mode="Opaque" x="0" y="0" width="305" height="20" forecolor="#FFFFFF" backcolor="#013870" uuid="724b2175-3044-4e95-b718-0859fc1289ca"/>
@@ -1017,7 +1017,7 @@
 						<reportElement positionType="Float" x="0" y="20" width="305" height="20" uuid="50efa4bb-27fe-4874-841f-c6da306dd39f"/>
 						<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
 							<datasetRun subDataset="dataset2" uuid="7610e1e1-836c-444c-8383-b0ff35418ad0">
-								<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/factura/infoAdicional/campoAdicional")]]></dataSourceExpression>
+								<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/liquidacionCompra/infoAdicional/campoAdicional")]]></dataSourceExpression>
 							</datasetRun>
 							<jr:listContents height="20" width="305">
 								<textField isStretchWithOverflow="true">
@@ -1045,8 +1045,8 @@
 							</jr:listContents>
 						</jr:list>
 					</componentElement>
-				</frame>
-				<frame>
+				</frame>-->
+				<!--<frame>
 					<reportElement positionType="Float" mode="Opaque" x="0" y="48" width="305" height="41" isRemoveLineWhenBlank="true" uuid="611aac77-19d0-4149-bb17-90575622e088"/>
 					<staticText>
 						<reportElement style="etiqueta-celda" mode="Opaque" x="185" y="0" width="50" height="20" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" backcolor="#013870" uuid="dcf0b19e-9566-4007-a020-5adde509d753"/>
@@ -1101,15 +1101,15 @@
 						</box>
 						<textElement textAlignment="Center"/>
 						<text><![CDATA[Tiempo]]></text>
-					</staticText>
-					<componentElement>
+					</staticText>-->
+					<!--<componentElement>
 						<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="20" width="305" height="20" uuid="40bb34b1-3fa9-4560-8081-220b0f7174f9"/>
 						<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
 							<datasetRun subDataset="dataset3" uuid="ee7aa6a2-1c10-4733-b7ec-efdf58a6d549">
 								<datasetParameter name="hmapFormasPago">
 									<datasetParameterExpression><![CDATA[$P{hmapFormasPago}]]></datasetParameterExpression>
 								</datasetParameter>
-								<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/factura/infoFactura/pagos/pago")]]></dataSourceExpression>
+								<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/liquidacionCompra/infoLiquidacionCompra/pagos/pago")]]></dataSourceExpression>
 							</datasetRun>
 							<jr:listContents height="20" width="305">
 								<textField isStretchWithOverflow="true">
@@ -1165,7 +1165,7 @@
 							</jr:listContents>
 						</jr:list>
 					</componentElement>
-				</frame>
+				</frame>-->
 			</frame>
 		</band>
 	</detail>
