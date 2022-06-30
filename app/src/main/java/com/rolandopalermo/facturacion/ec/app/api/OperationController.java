@@ -73,7 +73,7 @@ public class OperationController {
     @PostMapping(value = "certificados-digitales/empresas/{numeroRuc}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> insertDigitalCert(
             @ApiParam(value = SWAGGER_EMISOR, required = true) @PathVariable("numeroRuc") String numeroRuc,
-            @Valid @ApiParam(value = API_DOC_ANEXO_1, required = true) @RequestBody CertificadoDigitalDTO certificadoDigital) {
+            @ApiParam(value = API_DOC_ANEXO_1, required = true) @RequestBody CertificadoDigitalDTO certificadoDigital) {
         digitalCertService.save(numeroRuc, certificadoDigital);
         return new ResponseEntity<>(new VeronicaResponseDTO<>(true, null), HttpStatus.CREATED);
     }

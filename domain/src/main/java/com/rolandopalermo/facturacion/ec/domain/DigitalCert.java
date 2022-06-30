@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 @Getter
@@ -36,6 +37,7 @@ public class DigitalCert {
                     + "current_setting('encrypt.key')"
                     + ")"
     )
+
     private String password;
 
     @Column
