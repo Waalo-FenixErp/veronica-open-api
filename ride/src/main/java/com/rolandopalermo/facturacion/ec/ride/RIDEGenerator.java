@@ -76,6 +76,7 @@ public class RIDEGenerator {
             //Create temp XML file
             comprobante = File.createTempFile(numeroAutorizacion, ".xml");
             Path path = Paths.get(comprobante.getAbsolutePath());
+            System.out.println(comprobante.getAbsolutePath());
             try (BufferedWriter writer = Files.newBufferedWriter(path)) {
                 writer.write(xmlContent);
             }

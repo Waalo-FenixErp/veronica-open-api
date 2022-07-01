@@ -62,7 +62,7 @@
 	<parameter name="numeroAutorizacion" class="java.lang.String"/>
 	<parameter name="fechaAutorizacion" class="java.lang.String"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
-		<defaultValueExpression><![CDATA["C:\\Users\\Usuario\\Documents\\Eddu\\PasantiaS\\veronica-open-api\\ride\\src\\main\\resources\\com\\rolandopalermo\\facturacion\\ec\\ride\\"]]></defaultValueExpression>
+		<defaultValueExpression><![CDATA["E:\\Work\\Fenix\\ApiFacturacion\\Veronica\\produccion\\veronica-open-api\\ride\\src\\main\\resources\\com\\rolandopalermo\\facturacion\\ec\\ride\\"]]></defaultValueExpression>
 	</parameter>
 	<parameter name="hmapTiposDocumentos" class="java.util.HashMap"/>
 	<parameter name="logo" class="java.lang.String"/>
