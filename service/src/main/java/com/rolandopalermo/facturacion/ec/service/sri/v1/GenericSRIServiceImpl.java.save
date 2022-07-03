@@ -260,7 +260,7 @@ public abstract class GenericSRIServiceImpl<DTO extends ComprobanteDTO, MODEL ex
 	System.out.println("COMPROBANTES: "+respuestaComprobante.getNumeroComprobantes());
  //	List<Autorizacion> auth = respuestaComprobante.getAutorizaciones().getAutorizacion();
 	for (int i=0; i<respuestaComprobante.getAutorizaciones().getAutorizacion().size(); i++){
-		System.out.println("FOR "+i+":"+respuestaComprobante.getAutorizaciones().getAutorizacion().get(i).getEstado());
+		System.out.println("FOR "+i+":"+respuestaComprobante.getAutorizaciones().getAutorizacion().get(i.));
 
 	}
 	if (respuestaComprobante == null || respuestaComprobante.getAutorizaciones() == null

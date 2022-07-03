@@ -72,10 +72,14 @@ public class RIDEGenerator {
             throws VeronicaException {
         File comprobante;
         System.out.println(numeroAutorizacion+"ESPACIO"+fechaAutorizacion);
+	System.out.println("Testiando....");
+
         try {
             //Create temp XML file
+            System.out.println("Archivo Temporal xml");
             comprobante = File.createTempFile(numeroAutorizacion, ".xml");
-            Path path = Paths.get(comprobante.getAbsolutePath());
+            System.out.println(comprobante.toString());
+	    Path path = Paths.get(comprobante.getAbsolutePath());
             System.out.println(comprobante.getAbsolutePath());
             try (BufferedWriter writer = Files.newBufferedWriter(path)) {
                 writer.write(xmlContent);
@@ -124,7 +128,8 @@ public class RIDEGenerator {
             }
             return JasperExportManager.exportReportToPdf(jasperPrint);
         } catch (Exception e) {
-            throw new VeronicaException("Ocurrió un error interno al generar el PDF");
+            System.out.println(e.toString());
+            throw new VeronicaException("Ocurrió un error interno al generar el PDF. Error"+e.toString());
         }
     }
 
