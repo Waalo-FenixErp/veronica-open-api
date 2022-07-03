@@ -117,7 +117,7 @@ public abstract class GenericSRIServiceImpl<DTO extends ComprobanteDTO, MODEL ex
         } catch (VeronicaException | ResourceNotFoundException e) {
             throw e;
         } catch (Exception e) {
-            throw new VeronicaException("Ocurrió un error interno al intentar crear el comprobante electrónico.");
+            throw new VeronicaException("Ocurrió un error interno al intentar crear el comprobante electrónico."+e.toString());
         }
     }
 

@@ -26,6 +26,7 @@ import com.rolandopalermo.facturacion.ec.service.common.SignerUtils;
 import com.rolandopalermo.facturacion.ec.service.sri.GenericSRIService;
 import com.rolandopalermo.facturacion.ec.soap.client.AutorizacionComprobanteProxy;
 import com.rolandopalermo.facturacion.ec.soap.client.EnvioComprobantesProxy;
+import org.apache.bcel.generic.RETURN;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -117,7 +118,7 @@ public abstract class GenericSRIServiceImpl<DTO extends ComprobanteDTO, MODEL ex
         } catch (VeronicaException | ResourceNotFoundException e) {
             throw e;
         } catch (Exception e) {
-            throw new VeronicaException("Ocurrió un error interno al intentar crear el comprobante electrónico.");
+            throw new VeronicaException("Ocurrió un error interno al intentar crear el comprobante electrónico."+e.toString());
         }
     }
 
@@ -260,7 +261,10 @@ public abstract class GenericSRIServiceImpl<DTO extends ComprobanteDTO, MODEL ex
 	System.out.println("COMPROBANTES: "+respuestaComprobante.getNumeroComprobantes());
  //	List<Autorizacion> auth = respuestaComprobante.getAutorizaciones().getAutorizacion();
 	for (int i=0; i<respuestaComprobante.getAutorizaciones().getAutorizacion().size(); i++){
-		System.out.println("FOR "+i+":"+respuestaComprobante.getAutorizaciones().getAutorizacion().get(i).getEstado());
+	    if (respuestaComprobante.getAutorizaciones().getAutorizacion().get(i).getEstado() == "EN PROCESO"){
+            throw new ResourceNotFoundException(
+                    String.format("EN PROCESO"));
+        }
 
 	}
 	if (respuestaComprobante == null || respuestaComprobante.getAutorizaciones() == null
