@@ -261,9 +261,11 @@ public abstract class GenericSRIServiceImpl<DTO extends ComprobanteDTO, MODEL ex
 	System.out.println("COMPROBANTES: "+respuestaComprobante.getNumeroComprobantes());
  //	List<Autorizacion> auth = respuestaComprobante.getAutorizaciones().getAutorizacion();
 	for (int i=0; i<respuestaComprobante.getAutorizaciones().getAutorizacion().size(); i++){
-	    if (respuestaComprobante.getAutorizaciones().getAutorizacion().get(i).getEstado() == "EN PROCESO"){
-            throw new ResourceNotFoundException(
-                    String.format("EN PROCESO"));
+		System.out.println("Dentro del for"+respuestaComprobante.getAutorizaciones().getAutorizacion().get(i).getEstado());
+	    if (respuestaComprobante.getAutorizaciones().getAutorizacion().get(i).getEstado().trim().equals("EN PROCESO")){
+		System.out.println("IF EN PROCESO"+respuestaComprobante.getAutorizaciones().getAutorizacion().get(i).getEstado());		
+        	 throw new ResourceNotFoundException(
+                   String.format("ENPROCESO"));
         }
 
 	}
